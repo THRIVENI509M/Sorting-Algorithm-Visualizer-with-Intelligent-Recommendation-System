@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AI Powered Sorting Visualizer</title>
+</head>
+<body>
+    <header>AI Powered Sorting Visualizer</header>
+
+    <div class="main">
+        <section class="control-panel">
+            <input type="file" id="csv-upload" accept=".csv" hidden>
+            <label for="csv-upload" class="upload-btn">Upload CSV</label>
+
+            <button id="generate">Generate Data</button>
+            <button id="manual">Manual Input</button>
+       
+            <select id="algorithm">
+                <option value="bubble">Bubble Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="insertion">Insertion Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+            <button id="start">Start</button>            
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </section>
+    </div>
+    <div id="recommendation-banner" class="recommendation-banner">
+        <span>Suggested Algorithm: </span>
+        <span id="recommended-algo"></span>
+        <br>
+        <span>Reason: </span>
+        <span id="reason"></span>
+    </div>
+    <div id="speed-cont">
+        <label id="spd">Speed:</label>
+        <input type="range" id="speed" min="100" max="1000" value="200">
+        <span id="speed-val">200</span>
+    </div>
+   <div class="sort-container">  
+    <div class="sort">
+        <h2>Sorting Visualization</h2>
+        <div id="array-container"></div>
+        <div class="metrics">
+        <div>Comparisons:<span id="comp-count">0</span></div>
+        <div>Swaps:<span id="swap-count">0</span></div>
+        <div>Time:<span id="time-count">0</span></div>
+        </div>
+    </div>
+    <div class="sort">
+        <h2>Complexity Analysis</h2>
+        <canvas id="complexity-chart" width="500" height="300"></canvas>
+    </div>    
+
+   </div>
+   <div class="data-container">
+   <div class="data-info">
+     <div class="data-row">
+      <span>Data Size:</span>
+      <span id="data-size">0</span>
+    </div>
+
+    <div class="data-row">
+      <span>Status:</span>
+      <span id="status">-</span>
+    </div>
+
+    <div class="data-row highlight-row">
+      <span>Suggested Algorithm:</span>
+      <span id="suggest">-</span>
+    </div>
+ </div>
+
+   </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="chart.js" defer></script> 
+  <script src="csvparser.js"></script>
+  <script src="algorithm/bubble.js"></script>
+  <script src="algorithm/insertion.js"></script>
+  <script src="algorithm/quick.js"></script>
+  <script src="algorithm/merge.js"></script>
+  <script src="manual.js"></script>
+  <script src="dataAnalyzer.js"></script>
+  <script src="recommendation.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

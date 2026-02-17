@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: #eef2f7;
+}
+header {
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 25px;
+    color: white;
+    background: linear-gradient(135deg, #77a6f1, #4fa3ff);
+    margin-bottom: 30px;
+}
+.main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 10px;
+    
+}
+
+.control-panel {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.control-panel button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width:190px
+    
+}
+.upload-btn,
+#generate,
+#manual {
+    background: #f4f6fa;
+    border: 1px solid #d6dce5;
+    color: #333;
+}
+
+.upload-btn:hover,
+#generate:hover,
+#manual:hover {
+    background: #e4ebf5;
+}
+.upload-btn {
+    display: inline-block;   
+    text-align: center;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 190px;
+    transition: all 0.3s ease;
+}
+
+#start {
+    background: #28a745;
+    color: white;
+    width: 100px;
+    
+}
+
+#start:hover {
+    background: #218838;
+}
+#stop{
+    background: #ff4d4d;
+    color: white;
+    width:100px;
+}
+#stop:hover{
+    background: #e60000;
+}
+#reset {
+    background: #dc3545;
+    color: white;
+    width: 100px;
+
+}
+
+#reset:hover {
+    background: #c82333;
+}
+
+.sort-container {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.sort{
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    color: #0d3d6d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    min-height: 400px;
+}
+.sort h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}
+#array-container {
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+    margin-top: 15px;
+}
+.metrics {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.sort1 {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.recommendation-banner {
+    background-color:rgb(219, 219, 245) ;
+    color: #2c2c54;
+    padding: 15px 20px;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+#recommended-algo,
+#reason {
+    margin-top: 5px;
+    color: #333;
+}
+#speed-cont{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#spd{
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 300px;
+}
+input[type="range"] {
+    width: 300px;
+    height: 8px;
+    background: #d6dce5;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #28a745;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #28a745;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+#speed-val {
+    font-weight: bold;
+    margin-left: 10px;
+}
+.data-container{
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    gap: 25px;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+.data-info{
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    color: #0d3d6d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    min-height: 200px;
+}
+.data-info h2{
+   font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
+}   
+.ai-chat{
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    min-height: 200px;
+    width: 600px;
+
+    
+}
+.ai-chat h2{
+    font-size: large;
+    background: #2c6ed5;
+    color: white;
+    border-radius: 8px;
+    padding-left: 6px;
+}
+.bar{
+    width: 30px;
+    background: #218838;
+    margin: 2px;
+    display: flex;
+    justify-content:center;
+    align-items: flex-end;
+    color: #d6dce5;
+    transition: height 0.3s ease, background-color 0.2s ease;
+}
+
+#complexity-chart {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.manual-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.manual-modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.manual-textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    resize: none;
+}
+
+.manual-btn-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.manual-submit,
+.manual-cancel {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.manual-submit:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.manual-cancel:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+.data-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.data-info {
+    
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: rgb(202, 202, 247);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.data-info h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.data-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 0.95rem;
+    color: #444;
+    border-bottom: 1px solid #e6e9f5;
+}
+
+.data-row:last-child {
+    border-bottom: none;
+}
+
+.highlight-row {
+    font-weight: 600;
+    color: #2b6cff;
+}
+
+#suggest {
+    font-weight: 600;
+}
